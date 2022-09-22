@@ -15,8 +15,8 @@ node{
     stage('sshtarget'){
         sshagent(['targetssh']) {
             //sh 'scp -rp /home/ec2-user/jfrogsetup.sh ec2-user@54.90.85.126:/home/ec2-user/'
-            sh "ssh -q ec2-user@44.211.143.215 -o StrictHostKeyChecking=no /home/ec2-user/test.sh -n test -s fusion"
-            sh "ssh -q ec2-user@44.211.143.215 -o StrictHostKeyChecking=no hostname"
+            sh "ssh -q ec2-user@3.85.25.134 -o StrictHostKeyChecking=no /home/ec2-user/test.sh -n test -s fusion"
+            sh "ssh -q ec2-user@3.85.25.134 -o StrictHostKeyChecking=no hostname"
             sh 'uptime;hostname;whoami'
         }
         
