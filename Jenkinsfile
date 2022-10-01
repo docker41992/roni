@@ -20,7 +20,7 @@
 //             sh 'uptime;hostname;whoami'
 //         }
         
-//     }
+//  //   }
 // }
 
 pipeline {
