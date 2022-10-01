@@ -33,11 +33,13 @@ pipeline {
             }
         }
 	   stage('pushbuildtotarget') {
-            sshagent(['targetssh']) {
+		   steps {
+                      sshagent(['targetssh']) {
             //sh 'scp -rp /home/ec2-user/jfrogsetup.sh ec2-user@54.90.85.126:/home/ec2-user/'
 			sh "ssh -q ec2-user@34.230.38.110 -o StrictHostKeyChecking=no /home/ec2-user/test.sh -n test -s fusion"
                   sh "ssh -q ec2-user@34.230.38.110 -o StrictHostKeyChecking=no hostname"
                   sh 'uptime;hostname;whoami'
+		      }
             }
         }
     }
