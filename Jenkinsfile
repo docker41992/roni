@@ -1,8 +1,8 @@
 
 // node{
-//       //  parameters {
-//         //choice choices: ['fusion', 'unicorn'], name: 'name'
-//         //}
+//       parameters {
+//         choice choices: ['fusion', 'unicorn'], name: 'name'
+//         }
 //    // stage('Git Clone'){
 //       //  withCredentials([gitUsernamePassword(credentialsId: 'c763f9ba-98c1-4fb4-986b-ff8ad5d84d93', gitToolName: 'Default')]) {
 //         // sh 'git clone https://github.com/docker41992/devops.git'
